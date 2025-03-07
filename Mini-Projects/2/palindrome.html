@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input {
+            padding: 10px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Palindrome Checker</h1>
+    <input id="input" type="text" placeholder="Type Something" aria-label="Input for palindrome check"/>
+    <button onclick="check()">Check</button>
+
+    <button onclick="document.getElementById('input').value=''; document.getElementById('result').innerText='';">Reset</button>
+    <div id="result"></div>
+    <table id="history" border="1">
+        <thead>
+            <tr>
+                <th>Checked Word</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="palindrome.js"></script>
+</body>
+</html>
+</create_file>
