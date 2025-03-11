@@ -1,4 +1,8 @@
+/**
+ * Array of quotes to be displayed randomly.
+ */
 const quotes = [
+
     "The only way to do great work is to love what you do. - Steve Jobs",
     "Life is what happens when you're busy making other plans. - John Lennon",
     "Get busy living or get busy dying. - Stephen King",
@@ -19,29 +23,35 @@ const quotes = [
     "The way to get started is to quit talking and begin doing. - Walt Disney",
     "If you want to achieve greatness stop asking for permission. - Anonymous",
     "I find that the harder I work, the more luck I seem to have. - Thomas Jefferson"
-];
+]
 
-const usedIndexes = new Set();
-const quoteElement = document.getElementById("quote");
+const usedIndexes = new Set()// Set doesn't keep order but you cannot have 2 smae elements
+const quoteElement = document.getElementById("quote")
 
-function generateQuote() {
+
+function generateQuote(){
+    // Check if all quotes have been used
     if (usedIndexes.size === quotes.length) {
-        quoteElement.innerHTML = "All quotes have been used!";
-        return;
-    }
 
+        alert("All quotes have been used!");
+        usedIndexes.clear(); // Resetting for reuse
+    }
+    
     while (true) {
-        const randomIdx = Math.floor(Math.random() * quotes.length);
-        if (usedIndexes.has(randomIdx)) continue;
 
-        const quote = quotes[randomIdx];
+        const randomIdx = Math.floor(Math.random()* quotes.length)
+
+        if (usedIndexes.has(randomIdx)) continue
+
+        // Get the quote corresponding to the random index
+        const quote = quotes[randomIdx]
+
+
+        // Display the selected quote in the HTML element
         quoteElement.innerHTML = quote;
-        usedIndexes.add(randomIdx);
-        break;
-    }
-}
 
-function resetQuotes() {
-    usedIndexes.clear();
-    quoteElement.innerHTML = "Quotes have been reset. Click 'Generate Quote' to start again.";
+        usedIndexes.add(randomIdx)
+        break
+    }
+
 }
