@@ -3,5 +3,6 @@
 2. Pick one mini-project to work on. Make it useful by researching how to expand it.
 3. Long-term project: Create an application for each mini-project
 
-
+## Note Organization Process
+ Notepad
 

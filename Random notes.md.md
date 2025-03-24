@@ -31,3 +31,5 @@ Alternatively, you can indent lines with **four spaces** or **one tab**, but thi
         return `Hello, ${name}!`;
     }
     console.log(greet("Neema"));
+### Setting path for a file
+	setx PATH "%PATH%;C:\Users\naomi.mathenge\nodejs\node-v22.14.0-win-x64"
